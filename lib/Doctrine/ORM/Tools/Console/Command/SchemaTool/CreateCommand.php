@@ -51,6 +51,10 @@ class CreateCommand extends AbstractCommand
                 new InputOption(
                     'dump-sql', null, InputOption::VALUE_NONE,
                     'Instead of trying to apply generated SQLs into EntityManager Storage Connection, output them.'
+                ),
+                new InputOption(
+                    'target-orm', null, InputOption::VALUE_REQUIRED,
+                    'Target which ORM Entity manager connection to target. Example: --target-orm=orm_default'
                 )
             ]
         )

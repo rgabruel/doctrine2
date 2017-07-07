@@ -60,6 +60,10 @@ class DropCommand extends AbstractCommand
                     'full-database', null, InputOption::VALUE_NONE,
                     'Instead of using the Class Metadata to detect the database table schema, drop ALL assets that the database contains.'
                 ),
+                new InputOption(
+                    'target-orm', null, InputOption::VALUE_REQUIRED,
+                    'Target which ORM Entity manager connection to target. Example: --target-orm=orm_default'
+                ),
             ]
         )
         ->setHelp(<<<EOT

@@ -57,6 +57,10 @@ $commands = [];
 
 $helperSet = require $configFile;
 
+
+//var_dump($argv);
+/** @var \Symfony\Component\Console\Helper\HelperSet */
+var_dump(get_class($helperSet));
 if ( ! ($helperSet instanceof HelperSet)) {
     foreach ($GLOBALS as $helperSetCandidate) {
         if ($helperSetCandidate instanceof HelperSet) {

@@ -68,6 +68,10 @@ class UpdateCommand extends AbstractCommand
                     'force', 'f', InputOption::VALUE_NONE,
                     'Causes the generated SQL statements to be physically executed against your database.'
                 ),
+                new InputOption(
+                    'target-orm', null, InputOption::VALUE_REQUIRED,
+                    'Target which ORM Entity manager connection to target. Example: --target-orm=orm_default'
+                ),
             ]
         );
 
